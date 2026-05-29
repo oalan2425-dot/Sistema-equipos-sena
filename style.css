@@ -4,6 +4,7 @@ body {
     margin:0;
     padding: 20px;
     color: #0e0d0d;
+    text-align: center;
 }
 .topbar {
       background: linear-gradient(90deg,#02a726,#028a20);

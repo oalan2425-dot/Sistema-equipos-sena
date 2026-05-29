@@ -99,6 +99,7 @@ form {
     width:120px;
     height:auto;
     display:block;
+    margin:auto;
 }
 textarea {
     width: 100%;

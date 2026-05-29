@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de equipos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class ="topbar">
+<img src="/img/logo-sena-negro-png-2022.png" alt="Logo SENA" class="logo">
+
+    <div>
+        <h1>Sistema de Registro de Equipos</h1>
+        <p>Centro de Innovación Agroindustrial y de Servicios SENA - Regional Boyacá</p>
+    </div>
+</div>
+<div class="container">
+       
+<h2>Registrar uso de equipo</h2>
+<div id="contenedorFormulario">
+<form id="formRegistro">
+
+<div class="seccion">
+    <h3>Datos del aprendiz</h3>
+        <div class="form-grid">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name= "nombre" required>
+        </div>
+
+        <div>
+            <label for="jornada">Jornada:</label>
+            <select id = "jornada" required>
+            <option value="">Seleccione jornada</option>
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="formacion">Formación:</label>
+            <select id="formacion" name="formacion" required>
+            <option value="">Seleccione una formación</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="ficha">N° de ficha:</label>
+            <select id="ficha" name="ficha" required>
+            <option value="">Seleccione una ficha</option>
+            </select>    
+        </div>
+
+        <div class="seccion">
+            <h3>Datos del equipo</h3>
+            <label for="tipoequipo">Tipo del equipo:</label>
+            <select id="tipoequipo" name="tipoequipo">
+            <option value="portatil">Portatil</option>
+            <option value="computador">Computador de mesa</option>
+            </select>
+
+            <label for="equipo">Serial del equipo:</label>
+            <input type="text" id="equipo" name="equipo" required>
+
+            <label for="mouse">¿Con mouse?</label>
+            <select id="mouse" name="mouse">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
+
+            <label for="serialmouse">Serial del mouse:</label>
+            <input type="text" id="serialmouse" name="serialmouse" disabled>
+
+            <label for="cargador">¿Con cargador?</label>
+            <select id="cargador" name="cargador">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
+
+            <label for="serialcargador">Serial del cargador:</label>
+            <input type="text" id="serialcargador" name="serialcargador" disabled>
+
+            <label for="teclado">¿Con teclado?</label>
+            <select id="teclado" name="teclado">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            </select>
+
+            <label for="serialteclado">Serial del teclado:</label>
+            <input type="text" id="serialteclado" name= "serialteclado" disabled>
+        </div>
+    </div>
+</div>
+        <div class = "seccion">
+        <h3>Registro de uso</h3>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"required>
+
+        <label for="inicio">Hora inicio:</label>
+        <input type="time" id="inicio" name="inicio" required>
+
+        <label for="fin">Hora fin:</label>
+        <input type="time" id="fin" name="fin" required>
+
+        <label for="estado">Estado del equipo:</label>
+        <select id="estado" name="estado">
+            <option value="Bueno">Buen estado</option>
+            <option value="Malo">Mal estado</option>
+            <option value="Mantenimiento">Requiere mantenimiento</option>
+        </select>
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" rows="4"></textarea>
+        </div>
+
+        <div class="boton-container">
+            <button type="submit" class="btn-verde">
+                Guardar Registro
+            </button>
+        </div>
+
+    </form>
+    </div>
+
+        <p id="mensaje" style="color:green"></p>
+
+    <hr>
+        <h2>Acceso a Registros</h2>
+        <form id="formLogin">
+            <input type="text" id="usuario" placeholder="usuario" required>
+            <input type="password" id="password" placeholder="contraseña" required>
+
+            <div class="boton-container">
+                <button type="submit" class="btn-verde">
+                    Ingresar
+                </button>
+            </div>
+        </form>
+
+        <P id="error" style="color:red"></P>
+    
+        <div id="seccionAdmin" style="display:none;">
+        <h2>Registros</h2>
+        <div class="filtros">
+            <input type="text" id="filtroNombre" placeholder="Buscar por nombre">
+
+            <select id="filtroJornada">
+                <option value="">Todas las jornadas</option>
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+            </select>
+
+            <select id="filtroEstado">
+                <option value="">Seleccione el estado del equipo</option>
+                <option value="Bueno">Bueno</option>
+                <option value="Malo">Malo</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+            </select>
+
+            <input type="date" id="filtroFecha" placeholder="Buscar por fecha">
+
+            <select id="filtroTipo">
+                <option value="">Tipo de equipo</option>
+                <option value="portatil">Portatil</option>
+                <option value="computador">Computador</option>
+            </select>
+
+            <select id="filtroFicha">
+                <option value="">Todas las fichas</option>
+            </select>
+
+            <select id="filtroFormacion">
+                <option value="">Todas las formaciones</option>
+            </select>
+
+        </div>
+
+        <div class="dashboard">
+
+            <div class="card-stat">
+                <h3>Total registros</h3>
+                <p id=statTotal>0</p>
+            </div>
+
+            <div class="card-stat">
+                <h3>Equipos buenos</h3>
+                <p id="statBuenos">0</p>
+            </div>
+
+            <div class="card-stat">
+                <h3>Equipos dañados</h3>
+                <p id="statDanados">0</p>
+            </div>
+
+        </div>
+
+        <div class="tabla-container">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Jornada</th>
+                    <th>Formación</th>
+                    <th>Ficha</th>
+                    <th>Tipo de equipo</th>
+                    <th>Serial equipo</th>
+                    <th>mouse</th>
+                    <th>Serial mouse</th>
+                    <th>cargador</th>
+                    <th>Serial cargador</th>
+                    <th>teclado</th>
+                    <th>Serial teclado</th>
+                    <th>Fecha</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th>Estado</th>
+                    <th>Observaciones</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+
+<div class="paginacion">
+    <button id="btnAnterior">◀ Anterior</button>
+
+    <span id="infoPagina"></span>
+
+    <button id="btnSiguiente">Siguiente ▶</button>
+
+    </div>
+    <div class="acciones">
+
+        <button onclick="limpiarFiltros()">
+            Limpiar filtros
+        </button>
+        <button onclick="exportarExcelXLSX()">
+            Exportar a Excel
+        </button>
+
+    </div>
+    <div>  
+        <button class="btn-logout"onclick="logout()">
+            Cerrar sesión
+        </button>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="app.js" defer></script>
+
+</body>
+</html>

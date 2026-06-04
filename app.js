@@ -270,6 +270,7 @@ const formaciones = {
         {value: "ADSO", text: "Analisis y Desarrollo de Software"},
         {value: "COSIG", text: "Coordinación de Sistemas Integrados y de Gestión"},
         {value: "MER", text: "Mercadeo"},
+        {value: "T.H", text: "Talento Humano"},
     ],
     tarde: [
         {value: "G.C", text: "Gestión Contable"},
@@ -282,6 +283,7 @@ const formaciones = {
         {value: "A.D.S", text: "Administracion"},
         {value: "G.C", text: "Gestión Contable"},
         {value: "MET", text: "Metalmecanica"},
+        {value: "M.M", text: "Mantenimiento motos"},
     ]
 };
 
@@ -313,9 +315,9 @@ jornadaSelect.addEventListener("change", function(){
 const fichaSelect= document.getElementById("ficha");
 
 const fichas = {
-    mañana: [ "3311373","3177248","3411843" ],
+    mañana: [ "3311373","3177248","3411843", "3491877" ],
     tarde: [ "3226734", "3311393", "3311390", "3411832"],
-    noche: [ "3226710", "3286828", "3226736", "3411816"],
+    noche: [ "3226710", "3286828", "3226736", "3066281", "3411816", "3491871"],
 };
 
 fichaSelect.disabled = true;

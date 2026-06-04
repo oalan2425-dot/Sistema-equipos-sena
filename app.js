@@ -283,7 +283,7 @@ const formaciones = {
         {value: "A.D.S", text: "Administracion"},
         {value: "G.C", text: "Gestión Contable"},
         {value: "MET", text: "Metalmecanica"},
-        {value: "M.M", text: "Mantenimiento motos"},
+        {value: "M.E.M", text: "Mantenimiento Electromecanico de Motos"},
     ]
 };
 
